@@ -10,10 +10,17 @@
 
 // 1200 / 4 = 30rem
 // 1200 / 3 = 40rem
-.box-center {
+.box-center-3 {
 	grid-column: center-start / center-end;
 	display: grid;
 	grid-row-gap:2rem;
-	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+	justify-items: center;
+}
+.box-center-4 {
+	grid-column: center-start / center-end;
+	display: grid;
+	grid-row-gap:2rem;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	justify-items: center;
 }

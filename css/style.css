@@ -3,36 +3,66 @@
 *::after {
   box-sizing: inherit; }
 
-.box-center {
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6;
+  color: #656565;
+  background-color: #fff; }
+
+.container {
+  grid-template-rows: minmax(min-content, 100vh) repeat(8, min-content);
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 16.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.box-center-3 {
   grid-column: center-start / center-end;
   display: grid;
   grid-row-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  justify-items: center; }
+
+.box-center-4 {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center; }
 
 .header {
-  background-color: orangered; }
+  grid-column: full-start / full-end; }
 
 .service {
-  background-color: blue; }
+  background-color: blue;
+  grid-column: full-start / full-end; }
 
 .latest__properties {
-  background-color: #333; }
+  background-color: #333;
+  grid-column: center-start / center-end; }
 
 .locations {
-  background-color: yellow; }
+  background-color: yellow;
+  grid-column: full-start / full-end; }
 
 .featured__properties {
-  background-color: grey; }
+  background-color: grey;
+  grid-column: center-start / center-end; }
 
 .testimonials {
-  background-color: coral; }
+  background-color: coral;
+  grid-column: full-start / full-end; }
 
 .bestdeals__properties {
-  background-color: green; }
+  background-color: green;
+  grid-column: full-start / full-end; }
 
 .agents__content {
-  background-color: #ccc; }
+  background-color: #ccc;
+  grid-column: center-start / center-end; }
 
 .footer {
-  background-color: coral; }
+  background-color: coral;
+  grid-column: full-start / full-end; }

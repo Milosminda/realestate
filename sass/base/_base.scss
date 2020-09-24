@@ -4,3 +4,19 @@
 *::after {
 	box-sizing: inherit;
 }
+html {
+  box-sizing: border-box;
+  font-size: $default-font-size;
+}
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: $color-primary;
+  background-color: $color-secondary;
+}
+.container {
+  grid-template-rows: minmax(min-content, 100vh) repeat(8, min-content);
+  @include grid-template-columns;
+}
+// content: '\f107';
+// content: "keyboard_arrow_down";

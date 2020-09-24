@@ -1,27 +1,33 @@
-.header {
-	background-color: orangered;
-}
+
 .service {
-	background-color: blue;
+  background-color: blue;
+   grid-column: full-start / full-end;
 }
 .latest__properties {
-	background-color: #333;
+  background-color: #333;
+   grid-column: center-start / center-end;
 }
 .locations {
-	background-color: yellow;
+  background-color: yellow;
+   grid-column: full-start / full-end;
 }
 .featured__properties {
-	background-color: grey;
+  background-color: grey;
+   grid-column: center-start / center-end;
 }
 .testimonials {
-	background-color: coral;
+  background-color: coral;
+   grid-column: full-start / full-end;
 }
 .bestdeals__properties {
-	background-color: green;
+  background-color: green;
+   grid-column: full-start / full-end;
 }
 .agents__content {
-	background-color: #ccc;
+  background-color: #ccc;
+   grid-column: center-start / center-end;
 }
 .footer {
-	background-color: coral;
+  background-color: coral;
+   grid-column: full-start / full-end;
 }

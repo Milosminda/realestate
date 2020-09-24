@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+.box-center {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-items: center; }
+
+.header {
+  background-color: orangered; }
+
+.service {
+  background-color: blue; }
+
+.latest__properties {
+  background-color: #333; }
+
+.locations {
+  background-color: yellow; }
+
+.featured__properties {
+  background-color: grey; }
+
+.testimonials {
+  background-color: coral; }
+
+.bestdeals__properties {
+  background-color: green; }
+
+.agents__content {
+  background-color: #ccc; }
+
+.footer {
+  background-color: coral; }

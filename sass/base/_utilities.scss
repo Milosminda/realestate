@@ -1,0 +1,19 @@
+// Make helper class box for full center section
+// As
+// .c-box {
+// 	grid-column: center-start / center-end;
+// 	display: grid;
+// 	grid-row-gap:2rem;
+// 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
+// }
+// MAKE  one for section with 3 COLUMNS and one for 4 COLUMNS
+
+// 1200 / 4 = 30rem
+// 1200 / 3 = 40rem
+.box-center {
+	grid-column: center-start / center-end;
+	display: grid;
+	grid-row-gap:2rem;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	justify-items: center;
+}

@@ -1,0 +1,66 @@
+.form__content {
+  grid-column: col-end 5 / center-end;
+  grid-row: 2 / 4;
+  background-color: rgba($bkg-top-color, .7);
+  padding: 5rem;
+  margin: 6rem 0 5rem 8rem;
+  font-family: $font-heading-1;
+}
+.form {
+  &__group {
+    margin-top: 1rem;
+  }
+  &__input,
+  &__select {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    color: #889298;
+    font-weight: 700;
+  }
+  &__more {
+    &-filds {
+      display: none;
+    }
+    &-toggle {
+      display: block;
+      margin: 1rem 0;
+      text-align: center;
+      padding: 1.3rem 0;
+      &::after {
+        @include arrow-down;
+        margin-left: .6rem;
+        margin-bottom: 3px;
+      }
+    }
+    &-input {
+      padding: 1.5rem 2rem;
+      width: 49%;
+    }
+    &-title {
+      display: block;
+    }
+  }
+  &__input:focus,
+  &__select:focus,
+  &__more-input:focus {
+    outline: none;
+  }
+}
+#form__dropdown {
+  display: none;
+}
+input[type="text"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+.form__select {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba($bkg-top-color, .3);
+}
+input[type="checkbox"]:checked ~ .form__more-filds {
+  display: block;
+}
+input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
+  transform: rotate(-135deg);
+  margin-bottom: 0;
+}

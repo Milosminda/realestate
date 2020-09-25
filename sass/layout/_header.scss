@@ -1,3 +1,68 @@
 .header {
+  background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .2), rgba($bkg-top-color, .9)), url(../img/header-bg-1.jpg);
+  background-size: cover;
+  background-position: center;
   grid-column: full-start / full-end;
+  grid-template-rows: 5rem repeat(3, min-content);
+  @include grid-template-columns;
+  color: $color-secondary;
+  font-size: 1.7rem;
+  font-weight: 700;
+  // grid-row-gap: 1rem;
+  &__contact {
+    grid-column: col-end 6 / col-end 8;
+    text-align: end;
+    align-self: center;
+    &-icon {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: -0.5rem;
+    }
+    &-number {
+      font-size: 2.8rem;
+    }
+  }
+  &__content {
+    grid-column: center-start / col-end 3;
+    grid-row: 2 / 3;
+    align-self: end;
+    margin-top: 20rem;
+    h1 {
+      margin-bottom: 2rem;
+    }
+    &-box {
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity 1s;
+      &::before {
+        content: "";
+        display: block;
+        height: 4px;
+        background-color: $color-tertiary;
+        width: 10rem;
+        margin-bottom: 5rem;
+      }
+    }
+  }
 }
+.logo {
+  width: 12rem;
+  height: 9rem;
+  background-color: rgba($bkg-top-color, .7);
+  padding: 1rem;
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.slide__group{
+   display: none;
+}
+input[type="radio"]:checked + .header__content-box {
+    opacity: 1;
+    animation: animate__heading 1.5s;
+}
+// input[type="radio"]:checked ~ .header__content-box  {
+//   background-color: $bg-color; // Darker Color
+//   border: 1px solid $color-secondary;
+// }

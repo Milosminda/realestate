@@ -1,0 +1,32 @@
+// Main Navigation Dropdown
+.dropdown__menu {
+  opacity: 0;
+  // display: none;
+  visibility: hidden;
+  position: absolute;
+  background-color: $bkg-dropdown-color;
+  transform: translate(.2rem, 1.5rem);
+  transition: all .4s;
+  &-list {
+    border-bottom: 1px solid currentColor;
+    &:hover {
+      background-color: rgba($color-primary, .2);
+    }
+  }
+  &-link {
+    font-size: 1.7rem;
+    color: $color-primary;
+    width: 20rem;
+    display: block;
+    padding: 1.875rem 2.25rem 1.75rem;
+    font-weight: 400;
+  }
+}
+.navigation__list:hover .dropdown__menu {
+  transform: translate(0, 0);
+  opacity: 1;
+  // display: block;
+  visibility: visible;
+}
+// --------------------------- //
+// Form Dropdown

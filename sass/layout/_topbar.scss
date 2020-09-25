@@ -1,0 +1,27 @@
+.topbar {
+  background-color: rgba($bkg-top-color , .7);
+  grid-row: 1 / 2;
+  grid-column: full-start / full-end;
+  @include grid-template-columns;
+  align-content: center;
+  color: $color-primary;
+  font-size: 1.2rem;
+  &__text {
+    grid-column: center-start / col-start 6;
+    align-self: center;
+  }
+  &__link {
+  color: rgba($color-tertiary, .8);
+  transition: all .5s;
+  &:hover {
+      color: $color-secondary;
+    }
+  }
+}
+.social__media {
+  &-topbar {
+    grid-column: col-end 7 / center-end;
+    display: flex;
+    justify-content: space-between;
+  }
+}

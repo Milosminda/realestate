@@ -1,0 +1,41 @@
+.navigation {
+  grid-column: col-start 3 / col-end 6;
+  font-size: 2rem;
+  display: grid;
+  align-content: center;
+  margin-top: 3.5rem;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    position: relative;
+    cursor: pointer;
+    transition: all .5s;
+    &:not(:last-child)::after {
+      @include arrow-down;
+      margin-left: .5rem;
+      transition: all .5s;
+    } 
+  }
+
+  &__list:hover &__link::after {
+    transform: scaleX(1);
+    transition: all .5s;
+    background-color: $color-tertiary;
+  }
+  &__list:hover:not(:last-child)::after {
+    transform: rotate(-135deg);
+  }
+  &__link {
+    display: inline-block;
+    padding-bottom: 2px;
+    &::after {
+      transform: scaleX(0);
+      content: "";
+      display: block;
+      height: 4px;
+      background-color: transparent;
+    }
+  }
+}

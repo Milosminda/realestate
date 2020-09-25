@@ -1,0 +1,19 @@
+
+.btn {
+  font-size: 2rem;
+  padding: 1.7rem 0;
+  width: 100%;
+  color: $color-secondary;
+  background-color: $color-tertiary;
+  cursor: pointer;
+  border: none;
+  transition: all .4s;
+  font-weight: 600;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $color-tertiary;
+    background-color: $color-secondary;
+  }
+}

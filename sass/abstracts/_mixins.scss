@@ -12,3 +12,12 @@
 												 [center-start] repeat(8, [col-start] minmax(min-content, 16.5rem) 
 												 [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
+// Arrow down 
+@mixin arrow-down {
+  content: '';
+  display: inline-block;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+}

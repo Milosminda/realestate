@@ -1,0 +1,14 @@
+// Heading Animation
+@keyframes animate__heading {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

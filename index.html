@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Real Estate</title>
-
+	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat+Brush&family=Nunito:wght@400;700;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,19 +21,27 @@
 				or
 				<a href="#" class="topbar__link">register </a>
 				to create a new listing</p>
-			<div class="social__media">
-				<svg class="icon social__media-icon">
+			<div class="social__media-topbar">
+				<a href="#" class="social__media-link">
+				<svg class="icon social__media">
 					<use xlink:href="img/svg/sprite.svg#icon-facebook"></use>
 				</svg>
-				<svg class="icon social__media-icon">
+				</a>
+				<a href="#" class="social__media-link">
+				<svg class="icon social__media">
 					<use xlink:href="img/svg/sprite.svg#icon-twitter"></use>
 				</svg>
-				<svg class="icon social__media-icon">
-					<use xlink:href="img/svg/sprite.svg#icon-google-plus"></use>
-				</svg>
-				<svg class="icon social__media-icon">
+				</a>
+				<a href="#" class="social__media-link">
+				<svg class="icon social__media">
 					<use xlink:href="img/svg/sprite.svg#icon-linkedin"></use>
 				</svg>
+				</a>
+				<a href="#" class="social__media-link">
+				<svg class="icon social__media">
+					<use xlink:href="img/svg/sprite.svg#icon-google-plus"></use>
+				</svg>
+				</a>
 			</div>
 		</div>
 		<!-- Topbar END -->
@@ -42,7 +51,7 @@
 			<!-- Logo -->
 			<div class="logo">
 				<img class="logo__img" src="img/logo.png" alt="Logo">
-				<p class="logo__text">RealEstate</p>
+				<!-- <p class="logo__text">RealEstate</p> -->
 			</div>
 			<!-- Logo END -->
 
@@ -51,7 +60,7 @@
 				<ul class="navigation__item">
 					<!-- Home -->
 					<li class="navigation__list">
-						<a href="#" class="navigation__link">Home</a>
+						<a href="#" class="navigation__link active">Home</a>
 						<ul role="menu" class="dropdown__menu">
 							<li class="dropdown__menu-list">
 								<a href="#" class="dropdown__menu-link">Prvi</a>
@@ -108,13 +117,13 @@
 						<a href="#" class="navigation__link">Blog</a>
 						<ul role="menu" class="dropdown__menu">
 							<li class="dropdown__menu-list">
-								<a href="#" class="dropdown__menu-link">Prvi</a>
+								<a href="#" class="dropdown__menu-link">Post formats</a>
 							</li>
 							<li class="dropdown__menu-list">
-								<a href="#" class="dropdown__menu-link">Drugi</a>
+								<a href="#" class="dropdown__menu-link">Blog layout</a>
 							</li>
 							<li class="dropdown__menu-list">
-								<a href="#" class="dropdown__menu-link">Treci</a>
+								<a href="#" class="dropdown__menu-link">Sidebar setting</a>
 							</li>
 							<li class="dropdown__menu-list">
 								<a href="#" class="dropdown__menu-link">Cetvrti</a>
@@ -131,54 +140,78 @@
 
 			<!-- Contact -->
 			<div class="header__contact">
-				<p>Get in touch with us</p>
+				<p class="header__contact-text">Get in touch with us</p>
 				<svg class="icon header__contact-icon">
 					<use xlink:href="img/svg/sprite.svg#icon-phone"></use>
 				</svg>
-				<span class="header__contact-number">800-2345-6789</span>
+				<a href="tel:800-2345-6789" class="header__contact-number">800-2345-6789</a>
 			</div>
 			<!-- Contact END-->
-
+			<!-- <input type="radio" id="s-1" name="slide-group">
+			<label class="testimonial__label" for="s-1">
+				<span class="checkmark testimonial__box--1"></span>
+			</label> -->
 			<!-- Header Heading -->
 			<div class="header__content">
-				<div class="header__content-1">
-					<h1>Making the Dream of Home Real</h1>
-					<p>There is nothing more powerful or more important than home. That’s why we help people find the house of
-						their dreams or successfully sell their home.</p>
+				<input type="radio" id="s-1" name="slide-group" class="slide__group">
+				<div class="header__content-box header__content-1">
+						<h1 class="heading-1">The best way to find your home</h1>
+						<p>With industry-leading tools and the savviest pros in the business, our mission is to ethically and honestly serve our clients so that they can achieve the dream of home.</p>
 				</div>
-				<div class="header__content-2">
-					<h1>Making the Dream of Home Real</h1>
-					<p>There is nothing more powerful or more important than home. That’s why we help people find the house of
-						their dreams or successfully sell their home.</p>
+      </div>
+      <div class="header__content">
+				<input type="radio" id="s-2" name="slide-group" class="slide__group" checked>
+				<div class="header__content-box header__content-2">
+					<h1 class="heading-1">Find the home of your dreams</h1>
+					<p>We offer the excellent services for both landlords and tenants with our expert knowledge and personal approach. We guarantee the quality you may expect.</p>
 				</div>
-				<div class="header__content-3">
-					<h1>Making the Dream of Home Real</h1>
-					<p>There is nothing more powerful or more important than home. That’s why we help people find the house of
-						their dreams or successfully sell their home.</p>
+      </div>
+      <div class="header__content">
+				<input type="radio" id="s-3" name="slide-group" class="slide__group">
+				<div class="header__content-box header__content-3">
+					<h1 class="heading-1">Making the Dream of Home Real</h1>
+					<p>There is nothing more powerful or more important than home. That’s why we help people find the house of their dreams or successfully sell their home.</p>
 				</div>
-				<span>Tacka</span>
-				<span>Tacka</span>
-				<span>Tacka</span>
 			</div>
 			<!-- Header Heading END -->
-
+			<div class="checkmark__box">
+				<label class="slide__label slide__label--1" for="s-1">
+					<span class="checkmark"></span>
+				</label> 
+				<label class="slide__label slide__label--2" for="s-2">
+					<span class="checkmark"></span>
+				</label> 
+				<label class="slide__label slide__label--3" for="s-3">
+					<span class="checkmark"></span>
+				</label> 
+			</div>
 			<!-- Header Form -->
 			<div class="form__content">
 				<form action="#" class="form"">
-					<h3>Search for properties:</h3>
+					<h3 class="heading-3">Search for properties:</h3>
 					<div class="form__group">
-						<label for="#" class="form__label">span
+						<label for="#" class="form__label">Keyword
 							<input type="text" class="form__input" placeholder="Any">
 						</label>
 					</div>
 					<div class="form__group">
 						<label for="#" class="form__label">Property status
-							<input type="text" class="form__input" placeholder="Any">
+              <select name="" id="" class="form__select">
+                <option value>Any</option>
+                <option value="rent">Rent</option>
+                <option value="sale">Sale</option>
+              </select>
+							<!-- <input type="text" class="form__input" placeholder="Any"> -->
 						</label>
 					</div>
 					<div class="form__group">
 						<label for="#" class="form__label">Property type
-							<input type="text" class="form__input" placeholder="Any">
+              <select name="" id="" class="form__select">
+                <option value>Any</option>
+                <option value="building">Building</option>
+                <option value="office">Office</option>
+              </select>
+							<!-- <input type="text" class="form__input" placeholder="Any"> -->
 						</label>
 					</div>
 					<div class="form__group">
@@ -186,48 +219,49 @@
 							<input type="text" class="form__input" placeholder="Any">
 						</label>
 					</div>
-					<!-- Form Group More -->
-					<div class="form__group-more">
-						<div class="form__group-filds">
+					<!-- Form Group More DROPDOWN -->
+					<div class="form__more">
+            <input type="checkbox" id="form__dropdown">
+						<div class="form__more-filds">
 						<div class="form__group">
-							<span>Price</span>
-							<span>
-								<input type="text" class="form__input" placeholder="Min">
-								<input type="text" class="form__input" placeholder="Max">
-							</span>
+							<span class="form__more-title">Price</span>
+							<!-- <span> -->
+								<input type="number" step="0.01" class="form__more-input" placeholder="Min">
+								<input type="number" step="0.01" class="form__more-input" placeholder="Max">
+							<!-- </span> -->
 						</div>
 						<div class="form__group">
-							<span>Bedrooms</span>
-							<span>
-								<input type="text" class="form__input" placeholder="Min">
-								<input type="text" class="form__input" placeholder="Max">
-							</span>
+							<span class="form__more-title">Bedrooms</span>
+							<!-- <span> -->
+								<input type="number" min="0" class="form__more-input" placeholder="Min">
+								<input type="number" min="0" class="form__more-input" placeholder="Max">
+							<!-- </span> -->
 						</div>
 						<div class="form__group">
-							<span>Bathrooms</span>
-							<span>
-								<input type="text" class="form__input" placeholder="Min">
-								<input type="text" class="form__input" placeholder="Max">
-							</span>
+							<span class="form__more-title">Bathrooms</span>
+							<!-- <span> -->
+								<input type="number" min="0" class="form__more-input" placeholder="Min">
+								<input type="number" min="0" class="form__more-input" placeholder="Max">
+							<!-- </span> -->
 						</div>
 						<div class="form__group">
-							<span>Area</span>
-							<span>
-								<input type="text" class="form__input" placeholder="Min">
-								<input type="text" class="form__input" placeholder="Max">
-							</span>
+							<span class="form__more-title">Area</span>
+							<!-- <span> -->
+								<input type="number" step="0.01" name="min__area" class="form__more-input" placeholder="Min">
+								<input type="number" step="0.01" name="max__area" class="form__more-input" placeholder="Max">
+							<!-- </span> -->
 						</div>
 						<div class="form__group">
-							<span>parking spots</span>
-							<span>
-								<input type="text" class="form__input" placeholder="Min">
-								<input type="text" class="form__input" placeholder="Max">
-							</span>
+							<span class="form__more-title">Parking spots</span>
+							<!-- <span> -->
+								<input type="number" min="0" class="form__more-input" placeholder="Min">
+								<input type="number" min="0" class="form__more-input" placeholder="Max">
+							<!-- </span> -->
 						</div>
 					</div>
-					<label for="#" class="form__more-toggle">More</label>
+					<label for="form__dropdown" class="form__more-toggle btn">More</label>
 					</div>
-					<!-- Form Group More END -->
+					<!-- Form Group More DROPDOWN END -->
 					<button class="btn btn__search">Search</button>
 				</form>
 			</div>

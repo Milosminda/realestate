@@ -10,6 +10,14 @@
 
 // 1200 / 4 = 30rem
 // 1200 / 3 = 40rem
+.box-center {
+	grid-column: center-start / center-end;
+	display: grid;
+  grid-template-columns: [center-start] repeat(8, 
+                         [col-start] minmax(min-content, 16.5rem) 
+                         [col-end]) [center-end];
+                         grid-template-rows: auto;
+}
 .box-center-3 {
 	grid-column: center-start / center-end;
 	display: grid;
@@ -23,4 +31,12 @@
 	grid-row-gap:2rem;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	justify-items: center;
+}
+// Create active link class
+// Active hover class
+.active::after {
+  content: "";
+    display: block;
+    height: 4px;
+    background-color: $color-tertiary;
 }

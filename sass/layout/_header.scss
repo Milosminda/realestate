@@ -10,7 +10,7 @@
   font-weight: 700;
   // grid-row-gap: 1rem;
   &__contact {
-    grid-column: col-end 6 / col-end 8;
+    grid-column: col-end 6 / center-end;
     text-align: end;
     align-self: center;
     &-icon {

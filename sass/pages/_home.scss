@@ -42,26 +42,24 @@
   // @include grid-template-columns;
   grid-column: center-start / center-end;
   &-title {
-    grid-column: 1 / -1;
+    // grid-column: 1 / -1;
     text-align: center;
     margin-top: 7rem;
-  }
-  &-card {
-    margin-bottom: 7rem;
   }
 }
 // *************************** //
 //        LOCATIONS           //
 // ************************* //
 .locations {
-  background-color: $bkg-section-color;
+   background-color: $bkg-section-color;
    grid-column: full-start / full-end;
    @include grid-template-columns;
    grid-template-rows: repeat(2, min-content);
    font-size: 1.7rem;
    &__title {
     grid-column: col-start 3 / col-end 6;
-    margin: 7rem 0;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
     text-align: center;
    }
    &__h4 {
@@ -97,16 +95,112 @@
 //    Featured Properties     //
 // ************************* //
 .featured__properties {
-  background-color: grey;
-   grid-column: center-start / center-end;
+  grid-column: center-start / center-end;
+  font-size: 1.5rem;
+   &-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+  }
+  .card__img {
+    min-height: 25rem;
+  }
 }
-.testimonials {
-  background-color: coral;
-   grid-column: full-start / full-end;
+// *************************** //
+//       Testimonials         //
+// ************************* //
+.testimonial {
+  background-color: $bkg-section-color;
+  grid-column: full-start / full-end;
+  @include grid-template-columns;
+  text-align: center;
+  font-size: 1.6rem;
+  &__title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+  }
+  &__box {
+    background-color: $color-secondary; 
+    position: relative;
+    padding: 5rem 3rem;
+    transition: all .2s;
+    margin-top: 5rem;
+    &-title {
+      font-weight: 600;
+    }
+    &:hover {
+      transform: translateY(-.5rem) scale(1.005);
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+  &__details{
+    margin-top: 1rem;
+  }
+  &__info {
+    margin-top: 2rem;
+    color: $color-tertiary;
+    font-weight: 600;
+  }
+  &__stars {
+    margin-top: 1rem;
+    .icon {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
 }
+// *************************** //
+//   Best Deals Properties    //
+// ************************* //
 .bestdeals__properties {
-  background-color: green;
+   background-image: linear-gradient(rgba($bkg-section-color, .1), rgba($bkg-section-color, 1)); 
    grid-column: full-start / full-end;
+   @include grid-template-columns;
+   font-size: 1.4rem;
+   &-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 7rem;
+   }
+   &-card {
+     background-color: $color-secondary;
+     &:hover {
+      box-shadow: 0rem 0 2rem rgba($bg-color, .3);
+     }
+   }
+   &-content { 
+     color: $color-primary;
+     padding: 2rem 1.5rem;
+     a {
+       color: $color-primary;
+       font-size: 1.6rem;
+     }
+   }
+   &-small-title {
+     display: flex;
+     justify-content: space-between;
+    a {
+      color: $color-tertiary;
+      font-size: 1.8rem;
+    }
+   }
+   .card .card__img-img {
+     transition: all 1s;
+   }
 }
 .agents__content {
   background-color: #ccc;

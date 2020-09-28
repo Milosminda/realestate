@@ -16,6 +16,9 @@
       background-color: rgba($bkg-card-color, .5);
       padding: .8rem 1.6rem;
       border-bottom-left-radius: 2.4rem;
+      span {
+        display: block;
+      }
     }
     &-status {
       bottom: 0;
@@ -70,6 +73,10 @@
         width: 1.5rem;
         height: 1.5rem;
       }
+    }
+    &-description {
+      grid-column: 1 / -1;
+      margin-top: 0.7rem;
     }
     &-box {
       padding: 2rem 0;

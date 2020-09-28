@@ -87,10 +87,11 @@ body {
 .box-center-4 {
   display: grid;
   grid-column: center-start / center-end;
-  grid-template-columns: repeat(auto-fit, minmax(calc(25rem - 2rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  margin-top: 5rem; }
+  margin-top: 5rem;
+  margin-bottom: 7rem; }
 
 .active::after {
   content: "";
@@ -188,6 +189,8 @@ body {
       background-color: rgba(132, 132, 132, 0.5);
       padding: .8rem 1.6rem;
       border-bottom-left-radius: 2.4rem; }
+      .card .card__img-price span {
+        display: block; }
     .card .card__img-status {
       bottom: 0;
       left: 0;
@@ -231,6 +234,9 @@ body {
       .card .card__content-location svg {
         width: 1.5rem;
         height: 1.5rem; }
+    .card .card__content-description {
+      grid-column: 1 / -1;
+      margin-top: 0.7rem; }
     .card .card__content-box {
       padding: 2rem 0;
       color: #6d6c6ccb;
@@ -508,11 +514,8 @@ input[type="radio"]:checked + .header__content-box {
   grid-template-rows: repeat(2, min-content);
   grid-column: center-start / center-end; }
   .latest__properties-title {
-    grid-column: 1 / -1;
     text-align: center;
     margin-top: 7rem; }
-  .latest__properties-card {
-    margin-bottom: 7rem; }
 
 .locations {
   background-color: rgba(241, 238, 238, 0.466);
@@ -523,7 +526,8 @@ input[type="radio"]:checked + .header__content-box {
   font-size: 1.7rem; }
   .locations__title {
     grid-column: col-start 3 / col-end 6;
-    margin: 7rem 0;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
     text-align: center; }
   .locations__h4 {
     top: 50%;
@@ -550,16 +554,88 @@ input[type="radio"]:checked + .header__content-box {
       color: #fe5d4c; }
 
 .featured__properties {
-  background-color: grey;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  font-size: 1.5rem; }
+  .featured__properties-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem; }
+  .featured__properties .card__img {
+    min-height: 25rem; }
 
-.testimonials {
-  background-color: coral;
-  grid-column: full-start / full-end; }
+.testimonial {
+  background-color: rgba(241, 238, 238, 0.466);
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 16.5rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  text-align: center;
+  font-size: 1.6rem; }
+  .testimonial__title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem; }
+  .testimonial__box {
+    background-color: #fff;
+    position: relative;
+    padding: 5rem 3rem;
+    transition: all .2s;
+    margin-top: 5rem; }
+    .testimonial__box-title {
+      font-weight: 600; }
+    .testimonial__box:hover {
+      transform: translateY(-0.5rem) scale(1.005); }
+  .testimonial__img {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%); }
+    .testimonial__img img {
+      border-radius: 50%;
+      width: 100%; }
+  .testimonial__details {
+    margin-top: 1rem; }
+  .testimonial__info {
+    margin-top: 2rem;
+    color: #fe5d4c;
+    font-weight: 600; }
+  .testimonial__stars {
+    margin-top: 1rem; }
+    .testimonial__stars .icon {
+      width: 1.3rem;
+      height: 1.3rem; }
 
 .bestdeals__properties {
-  background-color: green;
-  grid-column: full-start / full-end; }
+  background-image: linear-gradient(rgba(241, 238, 238, 0.1), #f1eeee);
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 16.5rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  font-size: 1.4rem; }
+  .bestdeals__properties-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 7rem; }
+  .bestdeals__properties-card {
+    background-color: #fff; }
+    .bestdeals__properties-card:hover {
+      box-shadow: 0rem 0 2rem rgba(72, 72, 72, 0.3); }
+  .bestdeals__properties-content {
+    color: #656565;
+    padding: 2rem 1.5rem; }
+    .bestdeals__properties-content a {
+      color: #656565;
+      font-size: 1.6rem; }
+  .bestdeals__properties-small-title {
+    display: flex;
+    justify-content: space-between; }
+    .bestdeals__properties-small-title a {
+      color: #fe5d4c;
+      font-size: 1.8rem; }
+  .bestdeals__properties .card .card__img-img {
+    transition: all 1s; }
 
 .agents__content {
   background-color: #ccc;

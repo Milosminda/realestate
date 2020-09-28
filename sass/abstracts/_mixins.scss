@@ -21,3 +21,19 @@
   padding: 3px;
   transform: rotate(45deg);
 }
+@mixin arrow-right {
+  content: '';
+  display: inline-block;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(-45deg);
+}
+@mixin arrow-left {
+  content: '';
+  display: inline-block;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(135deg);
+}

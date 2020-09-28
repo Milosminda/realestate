@@ -1,11 +1,4 @@
 // Make helper class box for full center section
-// As
-// .c-box {
-// 	grid-column: center-start / center-end;
-// 	display: grid;
-// 	grid-row-gap:2rem;
-// 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
-// }
 // MAKE  one for section with 3 COLUMNS and one for 4 COLUMNS
 
 // 1200 / 4 = 30rem
@@ -32,11 +25,15 @@
   grid-row-gap:2rem;
   margin-top: 5rem;
 }
-// Create active link class
+// Create active link class with jQuery
 // Active hover class
 .active::after {
   content: "";
     display: block;
     height: 4px;
     background-color: $color-tertiary;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
 }

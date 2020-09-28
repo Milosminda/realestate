@@ -3,8 +3,4 @@
   height: 2rem;
   fill: $color-tertiary;
   transition: all .4s;
-  &:active,
-  &:hover {
-    fill: $color-secondary;
-  }
 }

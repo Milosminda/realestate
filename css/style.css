@@ -483,6 +483,10 @@ input[type="radio"]:checked + .header__content-box {
   opacity: 1;
   animation: animate__heading 1.5s; }
 
+.footer {
+  background-color: coral;
+  grid-column: full-start / full-end; }
+
 .service {
   background-color: rgba(241, 238, 238, 0.466);
   grid-column: full-start / full-end;
@@ -637,10 +641,40 @@ input[type="radio"]:checked + .header__content-box {
   .bestdeals__properties .card .card__img-img {
     transition: all 1s; }
 
-.agents__content {
-  background-color: #ccc;
-  grid-column: center-start / center-end; }
-
-.footer {
-  background-color: coral;
-  grid-column: full-start / full-end; }
+.agents {
+  grid-column: center-start / center-end;
+  font-size: 1.2rem; }
+  .agents-title {
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem; }
+  .agents__box {
+    box-shadow: 0rem 0 4rem rgba(0, 0, 0, 0.1);
+    display: flex; }
+    .agents__box:hover {
+      box-shadow: 0rem 0 4rem rgba(0, 0, 0, 0.2); }
+  .agents__img {
+    width: 18rem;
+    height: 20rem; }
+    .agents__img img {
+      height: 100%;
+      width: 100%; }
+  .agents__content {
+    padding: 1rem;
+    width: 50%; }
+    .agents__content-title {
+      display: block;
+      color: #fe5d4c;
+      border-bottom: 1px solid #f3f3f4; }
+    .agents__content span {
+      font-size: 1.8rem; }
+  .agents__email {
+    margin-top: .5rem; }
+  .agents__email, .agents__phone, .agents__web {
+    margin-top: .2rem; }
+  .agents__web > a,
+  .agents__email > a {
+    color: #992600; }
+    .agents__web > a:hover,
+    .agents__email > a:hover {
+      color: #fe5d4c; }

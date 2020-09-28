@@ -202,11 +202,58 @@
      transition: all 1s;
    }
 }
-.agents__content {
-  background-color: #ccc;
+// *************************** //
+//          Agents            //
+// ************************* //
+.agents {
    grid-column: center-start / center-end;
-}
-.footer {
-  background-color: coral;
-   grid-column: full-start / full-end;
+   font-size: 1.2rem;
+   &-title {
+    // grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+   }
+   &__box {
+    box-shadow: 0rem 0 4rem rgba(0, 0, 0, .1);
+    display: flex;
+    &:hover {
+      box-shadow: 0rem 0 4rem rgba(0, 0, 0, .2);
+    }
+   }
+   &__img {
+     width: 18rem;
+     height: 20rem;
+     img {
+       height: 100%;
+       width: 100%;
+     }
+   }
+   &__content {
+    padding: 1rem;
+    width: 50%;
+     &-title {
+       display: block;
+       color: $color-tertiary;
+       border-bottom: 1px solid $bkg-dropdown-color;
+     }
+     span {
+       font-size: 1.8rem;
+     }
+   }
+   &__email {
+     margin-top: .5rem;
+   }
+   &__email,
+   &__phone,
+   &__web {
+     margin-top: .2rem;
+   }
+   &__web > a,
+   &__email > a {
+    color: #992600;
+    &:hover {
+      color: $color-tertiary;
+    }
+   }
 }

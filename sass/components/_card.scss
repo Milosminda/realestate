@@ -87,3 +87,27 @@
     }
   }
 }
+// IMG Locations Card
+.locations__card {
+  height: 25rem;
+  box-shadow: 0rem 0 1rem rgba($bg-color, .1);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  font-family: $font-link;
+ &--1 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/london.jpg);}
+ &--2 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/rome.jpg);}
+ &--3 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/tokyo.jpg);}
+ &--4 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
+     rgba($bkg-btn-color, .6)), url(../img/paris.jpg);}
+ &--5 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/newyork.jpg);}
+ &--6 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/dubai.jpg);}
+  & > * {
+    position: absolute;
+  }
+}

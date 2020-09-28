@@ -9,7 +9,7 @@
    text-align: center;
    font-size: 1.5rem;
    &__title {
-    grid-column: col-start 4 / col-end 5;
+    grid-column: col-start 3 / col-end 6;
     margin-top: 7rem;
    }
    &__container {
@@ -39,8 +39,8 @@
 .latest__properties {
   font-size: 1.5rem;
   grid-template-rows: repeat(2, min-content);
-  @include grid-template-columns;
-  grid-column: full-start / full-end;
+  // @include grid-template-columns;
+  grid-column: center-start / center-end;
   &-title {
     grid-column: 1 / -1;
     text-align: center;
@@ -50,15 +50,52 @@
     margin-bottom: 7rem;
   }
 }
-
-
 // *************************** //
 //        LOCATIONS           //
 // ************************* //
 .locations {
-  background-color: yellow;
+  background-color: $bkg-section-color;
    grid-column: full-start / full-end;
+   @include grid-template-columns;
+   grid-template-rows: repeat(2, min-content);
+   font-size: 1.7rem;
+   &__title {
+    grid-column: col-start 3 / col-end 6;
+    margin: 7rem 0;
+    text-align: center;
+   }
+   &__h4 {
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 3.2rem;
+   }
+   &__listing {
+    color: $color-secondary;
+    left: 2.5rem;
+    bottom: 1.5rem;
+    padding: .7rem 1.7rem;
+    border-radius: 2.3rem;
+    background-color: rgba($bkg-btn-color, .6);
+    font-family: $font-primary;
+   }
+   &__state {
+    right: 2rem;
+    bottom: 1.5rem;
+    color: $color-tertiary;
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    a {
+      font-size: 2.2rem;
+      color: $color-tertiary;
+    }
+   }
 }
+// *************************** //
+//    Featured Properties     //
+// ************************* //
 .featured__properties {
   background-color: grey;
    grid-column: center-start / center-end;

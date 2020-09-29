@@ -1,21 +1,45 @@
 .navigation {
   grid-column: col-start 3 / col-end 6;
+  grid-row: 1 / 2;
   font-size: 2rem;
   display: grid;
-  align-content: center;
-  margin-top: 3.5rem;
+  align-content: end;
+  @include respond(tab-land) {grid-column: col-start 2 / col-end 6;}
+  @include respond(tab-land-medium) {
+    grid-column: col-start 4 / col-end 8;
+    grid-row: 2 / 3;
+    margin-top: 1rem;
+  }
+  @include respond(tab-port-medium) {
+    grid-column: center-start / center-end ;
+    background-color: rgba($bkg-top-color , .9);
+    display: none;
+    opacity: 0;
+  }
   &__item {
     display: flex;
     justify-content: space-between;
+    @include respond(tab-port-medium) {
+      display: block;
+    }
   }
   &__list {
     position: relative;
     cursor: pointer;
     transition: all .5s;
+    @include respond(tab-port-medium) {
+      padding: .5rem 1.5rem;
+      width: 100%;
+    }
     &:not(:last-child)::after {
       @include arrow-down;
       margin-left: .5rem;
       transition: all .5s;
+      @include respond(tab-port-medium) {
+        position: absolute;
+        top: 1.3rem;
+        right: 2.5rem;
+      }
     } 
   }
 
@@ -30,12 +54,35 @@
   &__link {
     display: inline-block;
     padding-bottom: 2px;
+    @include respond(tab-port-medium) {
+      width: 95%;
+    }
     &::after {
       transform: scaleX(0);
       content: "";
       display: block;
       height: 4px;
       background-color: transparent;
+    }
+  }
+}
+.active__list {
+  & .navigation__link::after {
+    transform: scaleX(1);
+    transition: all .5s;
+    background-color: $color-tertiary;
+  }
+  &:not(:last-child)::after {
+    transform: rotate(-135deg);
+  }
+  & .dropdown__menu {
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+    
+    @include respond(tab-port-medium) {
+      display: block;
+      // width: 50%;
     }
   }
 }

@@ -22,13 +22,14 @@ $bkg-btn-color: #080808;
 // Box Shadow
 $box-shadow: #efeded;
 
+// RESPONSIVE BREAKPOINTS
+$big-desktop: 125em; // 1200px
+$tab-land: 75em; // 1200px
+$tab-land-medium: 65.62em; // 1050px
+$tab-port: 56.25em; // 900px
+$tab-port-medium: 50em; // 800px
+$tab-port-small: 43.75em; // 700px
+$phone: 37.5em; // 600px
+$phone-medium: 28.12em; // 450px
+$phone-small: 23.12em; // 370px
 
-// Default Font Size
-$default-font-size: 62.5%;
-
-
-// nunito -- obican text 
-
-// h2 abril fatface
-
-// a - caveat brush, cursive fw - 400

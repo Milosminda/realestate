@@ -37,3 +37,76 @@
   padding: 4px;
   transform: rotate(135deg);
 }
+@mixin arrow-top {
+  content: '';
+  display: inline-block;
+  border: solid currentColor;
+  border-width: 0 4px 4px 0;
+  padding: 8px;
+  transform: rotate(-135deg);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px Phone
+600 - 900 Tablet portrait
+900-1200 Tablet landscape
+1200 -1800 is where normal style apply
+1800px + Big desktop
+
+$breakpoint argument choices
+
+-- big-desktop : 125em // 2000px
+-- tab-land: 75em; // 1200px
+-- tab-land-medium: 65.62em; // 1050px
+-- tab-port: 56.25em; // 900px
+-- tab-port-small: 43.75em; // 700px
+-- phone: 37.5em; // 600px
+-- phone-medium: 28.12em; // 450px
+-- phone-small: 23.12em; // 370px
+
+1em = 16px
+
+ORDER: Base + typography > general layout + grid > page layut > components
+*/
+// Need to write my own rules of writing media queries ! <--------
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone-small {
+		@media only screen and (max-width: $phone-small) { @content }; // 370px
+	}
+	@if $breakpoint == phone-medium {
+		@media only screen and (max-width: $phone-medium) { @content }; // 450px
+	}
+	@if $breakpoint == phone {
+		@media only screen and (max-width: $phone) { @content }; // 600px
+	}
+	@if $breakpoint == phone-min {
+		@media only screen and (min-width: $phone) { @content }; // MIN 600px
+	}
+	@if $breakpoint == tab-port-small {
+		@media only screen and (max-width: $tab-port-small) { @content }; // 700px
+  }
+  @if $breakpoint == tab-port-medium-min {
+		@media only screen and (min-width: $tab-port-medium) { @content }; // 800px
+	}
+  @if $breakpoint == tab-port-medium {
+		@media only screen and (max-width: $tab-port-medium) { @content }; // 800px
+	}
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: $tab-port) { @content }; // 900px
+	}
+	@if $breakpoint == tab-land-medium {
+		@media only screen and (max-width: $tab-land-medium) { @content }; // 1050px
+	}
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: $tab-land) { @content }; // 1200px
+	}
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: $big-desktop) { @content }; // MIN 2000px
+	}
+}
+@mixin respond-img {
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), 
+				only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), 
+				(min-width: 125em) { @content; }
+}

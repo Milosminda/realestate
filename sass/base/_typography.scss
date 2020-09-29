@@ -3,12 +3,16 @@
   line-height: 1.2;
   font-weight: 700;
   font-family: $font-heading-1;
+  @include respond(tab-land) {font-size: 6rem;}
+  @include respond(tab-land-medium ) {font-size: 5rem;}
+  @include respond(tab-port-medium) {font-size: 4.5rem;}
 }
 .heading-2 {
   font-size: 4rem;
   line-height: 1;
   font-family: $font-heading-2;
   font-weight: 400;
+  @include respond(tab-port-medium) {font-size: 3.5rem;}
 }
 .heading-3 {
   font-size: 3rem;

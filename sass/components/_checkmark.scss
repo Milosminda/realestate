@@ -12,11 +12,21 @@
     transform: scale(2.3);
     border: 1px solid $color-secondary;
   }
+  &-active {
+    
+    background-color: $bg-color; // Darker Color
+    transform: scale(2.3);
+    border: 1px solid $color-secondary;
+  }
   &__box {
     grid-row: 3 / 4;
     display: flex;
     justify-content: space-around;
     margin-top: 5rem;
     z-index: 999;
+    @include respond(tab-land-medium) {
+      grid-row: 4 / 5;
+      margin-top: 2rem;
+    }
   }
 }

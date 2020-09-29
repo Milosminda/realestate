@@ -61,5 +61,53 @@ function autoSlide() {
   setTimeout(autoSlide, 3500); // Change image every 3 seconds
 }
 
+// Check mark ACTIVE
+$(".checkmark").each(function(e) {
+ var thisLink = $(this);
+ thisLink.click(function(e) {
+   $('.checkmark').removeClass('checkmark-active');
+   $(this).addClass('checkmark-active');
+ })
+})
+// Navigation ACTIVE
+$(".navigation__link").each(function(e) {
+  var tnav_link = $(this);
+  tnav_link.click(function(e) {
+    $('.navigation__link').parent().removeClass('active__list');
+    $(this).parent().addClass('active__list');
+    e.preventDefault();
+    // var sad = $('.navigation__link').parent().hasClass('active__list')
+    // console.log(asd);
+  })
+ })
+// Back To Top
+$('.back-to-top').click(function (e) {
+  $('html, body').animate({scrollTop: 0}, 2000);
+  })
+// Dropdown Navigation
+$('.navigation__dropdown-btn').click(function(e) {
+  $('.navigation').toggle(
+    function(){
+        $('.navigation').animate({
+            height: "0",
+            opacity: 0,
+            display: 'none'
+        }, 800);
+    },
+    function(){
+        $('.navigation').animate({
+            height: "100%", 
+            opacity: 1,
+            display: 'block'
+        }, 800);
+  });
+});
 
 });
+// function openForm() {
+//   document.getElementById("myForm").style.display = "block";
+// }
+
+// function closeForm() {
+//   document.getElementById("myForm").style.display = "none";
+// }

@@ -5,6 +5,24 @@
   padding: 5rem;
   margin: 6rem 0 5rem 8rem;
   font-family: $font-heading-1;
+  @include respond(tab-land-medium) {
+    grid-row: 3 / 5;
+    margin: 3rem 0 2rem 4rem;
+  }
+  @include respond(tab-port-medium) {margin:2rem 0 0 0;}
+  @include respond(tab-port-small) {
+    font-size: 2rem; 
+    grid-column: col-start 2 / col-end 6;
+    grid-row: 5 / 7;
+   }
+   @include respond(phone) {
+    grid-column: col-start 2 / col-end 7;
+    padding: 3rem;
+   }
+   @include respond(phone-medium) {
+    grid-column: col-start 1 / col-end 8;
+   }
+
 }
 .form {
   &__group {

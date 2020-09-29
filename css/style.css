@@ -1,3 +1,25 @@
+/*
+0 - 600px Phone
+600 - 900 Tablet portrait
+900-1200 Tablet landscape
+1200 -1800 is where normal style apply
+1800px + Big desktop
+
+$breakpoint argument choices
+
+-- big-desktop : 125em // 2000px
+-- tab-land: 75em; // 1200px
+-- tab-land-medium: 65.62em; // 1050px
+-- tab-port: 56.25em; // 900px
+-- tab-port-small: 43.75em; // 700px
+-- phone: 37.5em; // 600px
+-- phone-medium: 28.12em; // 450px
+-- phone-small: 23.12em; // 370px
+
+1em = 16px
+
+ORDER: Base + typography > general layout + grid > page layut > components
+*/
 @keyframes animate__heading {
   0% {
     transform: translateY(15%);
@@ -31,6 +53,15 @@ li {
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 43.75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -48,12 +79,24 @@ body {
   line-height: 1.2;
   font-weight: 700;
   font-family: "Poppins", sans-serif; }
+  @media only screen and (max-width: 75em) {
+    .heading-1 {
+      font-size: 6rem; } }
+  @media only screen and (max-width: 65.62em) {
+    .heading-1 {
+      font-size: 5rem; } }
+  @media only screen and (max-width: 50em) {
+    .heading-1 {
+      font-size: 4.5rem; } }
 
 .heading-2 {
   font-size: 4rem;
   line-height: 1;
   font-family: "Abril Fatface", cursive;
   font-weight: 400; }
+  @media only screen and (max-width: 50em) {
+    .heading-2 {
+      font-size: 3.5rem; } }
 
 .heading-3 {
   font-size: 3rem; }
@@ -83,6 +126,9 @@ body {
   grid-column-gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   margin-bottom: 7rem; }
+  @media only screen and (max-width: 75em) {
+    .box-center-3 {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
 
 .box-center-4 {
   display: grid;
@@ -115,12 +161,20 @@ body {
     background-color: #484848;
     transform: scale(2.3);
     border: 1px solid #fff; }
+  .checkmark-active {
+    background-color: #484848;
+    transform: scale(2.3);
+    border: 1px solid #fff; }
   .checkmark__box {
     grid-row: 3 / 4;
     display: flex;
     justify-content: space-around;
     margin-top: 5rem;
     z-index: 999; }
+    @media only screen and (max-width: 65.62em) {
+      .checkmark__box {
+        grid-row: 4 / 5;
+        margin-top: 2rem; } }
 
 .btn {
   font-size: 2rem;
@@ -277,6 +331,25 @@ body {
   padding: 5rem;
   margin: 6rem 0 5rem 8rem;
   font-family: "Poppins", sans-serif; }
+  @media only screen and (max-width: 65.62em) {
+    .form__content {
+      grid-row: 3 / 5;
+      margin: 3rem 0 2rem 4rem; } }
+  @media only screen and (max-width: 50em) {
+    .form__content {
+      margin: 2rem 0 0 0; } }
+  @media only screen and (max-width: 43.75em) {
+    .form__content {
+      font-size: 2rem;
+      grid-column: col-start 2 / col-end 6;
+      grid-row: 5 / 7; } }
+  @media only screen and (max-width: 37.5em) {
+    .form__content {
+      grid-column: col-start 2 / col-end 7;
+      padding: 3rem; } }
+  @media only screen and (max-width: 28.12em) {
+    .form__content {
+      grid-column: col-start 1 / col-end 8; } }
 
 .form__group {
   margin-top: 1rem; }
@@ -341,17 +414,38 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
 
 .navigation {
   grid-column: col-start 3 / col-end 6;
+  grid-row: 1 / 2;
   font-size: 2rem;
   display: grid;
-  align-content: center;
-  margin-top: 3.5rem; }
+  align-content: end; }
+  @media only screen and (max-width: 75em) {
+    .navigation {
+      grid-column: col-start 2 / col-end 6; } }
+  @media only screen and (max-width: 65.62em) {
+    .navigation {
+      grid-column: col-start 4 / col-end 8;
+      grid-row: 2 / 3;
+      margin-top: 1rem; } }
+  @media only screen and (max-width: 50em) {
+    .navigation {
+      grid-column: center-start / center-end;
+      background-color: rgba(10, 25, 35, 0.9);
+      display: none;
+      opacity: 0; } }
   .navigation__item {
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 50em) {
+      .navigation__item {
+        display: block; } }
   .navigation__list {
     position: relative;
     cursor: pointer;
     transition: all .5s; }
+    @media only screen and (max-width: 50em) {
+      .navigation__list {
+        padding: .5rem 1.5rem;
+        width: 100%; } }
     .navigation__list:not(:last-child)::after {
       content: '';
       display: inline-block;
@@ -361,6 +455,11 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
       transform: rotate(45deg);
       margin-left: .5rem;
       transition: all .5s; }
+      @media only screen and (max-width: 50em) {
+        .navigation__list:not(:last-child)::after {
+          position: absolute;
+          top: 1.3rem;
+          right: 2.5rem; } }
   .navigation__list:hover .navigation__link::after {
     transform: scaleX(1);
     transition: all .5s;
@@ -370,12 +469,31 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   .navigation__link {
     display: inline-block;
     padding-bottom: 2px; }
+    @media only screen and (max-width: 50em) {
+      .navigation__link {
+        width: 95%; } }
     .navigation__link::after {
       transform: scaleX(0);
       content: "";
       display: block;
       height: 4px;
       background-color: transparent; }
+
+.active__list .navigation__link::after {
+  transform: scaleX(1);
+  transition: all .5s;
+  background-color: #fe5d4c; }
+
+.active__list:not(:last-child)::after {
+  transform: rotate(-135deg); }
+
+.active__list .dropdown__menu {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible; }
+  @media only screen and (max-width: 50em) {
+    .active__list .dropdown__menu {
+      display: block; } }
 
 .topbar {
   background-color: rgba(10, 25, 35, 0.7);
@@ -385,7 +503,8 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 16.5rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   align-content: center;
   color: #656565;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  padding: 2rem 0; }
   .topbar__text {
     grid-column: center-start / col-start 6;
     align-self: center; }
@@ -403,6 +522,11 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
 .social__media-icon:hover {
   fill: #fff; }
 
+.navbar {
+  grid-column: center-start / center-end;
+  grid-row: 1 / 2;
+  display: grid; }
+
 .dropdown__menu {
   opacity: 0;
   visibility: hidden;
@@ -410,8 +534,16 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   background-color: #f3f3f4;
   transform: translate(0.2rem, 1.5rem);
   transition: all .4s; }
+  @media only screen and (max-width: 50em) {
+    .dropdown__menu {
+      position: relative;
+      display: none;
+      background-color: transparent; } }
   .dropdown__menu-list {
     border-bottom: 1px solid currentColor; }
+    @media only screen and (max-width: 50em) {
+      .dropdown__menu-list {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
     .dropdown__menu-list:hover {
       background-color: rgba(101, 101, 101, 0.2); }
   .dropdown__menu-link {
@@ -421,38 +553,100 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
     display: block;
     padding: 1.875rem 2.25rem 1.75rem;
     font-weight: 400; }
+    @media only screen and (max-width: 50em) {
+      .dropdown__menu-link {
+        width: 90%;
+        padding: .875rem 1.25rem .75rem;
+        color: rgba(255, 255, 255, 0.7); } }
 
 .navigation__list:hover .dropdown__menu {
   transform: translate(0, 0);
   opacity: 1;
   visibility: visible; }
 
+.navigation__dropdown {
+  grid-row: 1 / 2;
+  grid-column: col-end 7 / col-end 8;
+  align-self: end;
+  justify-self: end;
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  transition: background-color .3s; }
+  @media only screen and (min-width: 50em) {
+    .navigation__dropdown {
+      display: none; } }
+  .navigation__dropdown-btn {
+    height: 5rem;
+    width: 5rem;
+    background-color: rgba(10, 25, 35, 0.4);
+    outline: none;
+    border: none;
+    cursor: pointer; }
+  .navigation__dropdown-icon, .navigation__dropdown-icon::before, .navigation__dropdown-icon::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3rem;
+    background-color: #fff;
+    position: absolute; }
+  .navigation__dropdown-icon {
+    margin-left: 7px; }
+    .navigation__dropdown-icon::before {
+      margin-top: -10px; }
+    .navigation__dropdown-icon::after {
+      margin-top: 10px; }
+  .navigation__dropdown:hover {
+    background-color: #fe5d4c; }
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.2), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1.jpg);
   background-size: cover;
   background-position: center;
   grid-column: full-start / full-end;
-  grid-template-rows: 5rem repeat(3, min-content);
   display: grid;
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 16.5rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   color: #fff;
   font-size: 1.7rem;
   font-weight: 700; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      padding-bottom: 2rem; } }
   .header__contact {
-    grid-column: col-end 6 / center-end;
+    grid-column: 7 / 8;
     text-align: end;
-    align-self: center; }
+    align-self: end; }
+    @media only screen and (max-width: 50em) {
+      .header__contact {
+        grid-column: 6 / 7; } }
     .header__contact-icon {
       width: 3rem;
       height: 3rem;
       margin-bottom: -0.5rem; }
     .header__contact-number {
       font-size: 2.8rem; }
+      @media only screen and (max-width: 65.62em) {
+        .header__contact-number {
+          font-size: 2.2rem; } }
+      @media only screen and (max-width: 50em) {
+        .header__contact-number {
+          font-size: 1.9rem; } }
   .header__content {
     grid-column: center-start / col-end 3;
     grid-row: 2 / 3;
     align-self: end;
     margin-top: 20rem; }
+    @media only screen and (max-width: 75em) {
+      .header__content {
+        grid-column: center-start / col-end 4; } }
+    @media only screen and (max-width: 65.62em) {
+      .header__content {
+        grid-row: 3 / 4;
+        margin-top: 0rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .header__content {
+        grid-column: col-start 1 / center-end 7;
+        margin-top: 1rem; } }
     .header__content h1 {
       margin-bottom: 2rem; }
     .header__content-box {
@@ -470,7 +664,11 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
 .logo {
   width: 12rem;
   height: 11rem;
-  padding: 1rem; }
+  padding-top: 1rem; }
+  @media only screen and (max-width: 28.12em) {
+    .logo {
+      width: 10rem;
+      height: 9rem; } }
   .logo__img {
     width: 100%;
     height: 100%; }
@@ -497,6 +695,9 @@ input[type="radio"]:checked + .header__content-box {
     padding-bottom: 5rem;
     margin-bottom: 3rem;
     border-bottom: 2px solid rgba(109, 108, 108, 0.1); }
+    @media only screen and (max-width: 23.12em) {
+      .footer__box {
+        margin-left: 3rem; } }
   .footer__logo {
     margin-bottom: 3rem; }
   .footer__title {
@@ -533,10 +734,24 @@ input[type="radio"]:checked + .header__content-box {
       transform: scale(1.2); }
 
 .copyright {
-  grid-column: full-start / full-end;
-  text-align: center; }
+  grid-column: col-start 1 / col-end 7;
+  text-align: center;
+  align-self: end; }
   .copyright:hover > a {
     color: #992600; }
+
+.back-to-top {
+  grid-column: col-end 7 / col-end 8;
+  width: 6rem;
+  padding: .5rem 0; }
+  .back-to-top::after {
+    content: '';
+    display: inline-block;
+    border: solid currentColor;
+    border-width: 0 4px 4px 0;
+    padding: 8px;
+    transform: rotate(-135deg);
+    margin-top: 1.5rem; }
 
 .service {
   background-color: rgba(241, 238, 238, 0.466);

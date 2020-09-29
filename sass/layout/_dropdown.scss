@@ -7,8 +7,16 @@
   background-color: $bkg-dropdown-color;
   transform: translate(.2rem, 1.5rem);
   transition: all .4s;
+  @include respond(tab-port-medium) {
+    position: relative;
+    display: none;
+    background-color: transparent;
+  }
   &-list {
     border-bottom: 1px solid currentColor;
+    @include respond(tab-port-medium) {
+      border-bottom: 1px solid rgba($color-secondary, .3);
+    }
     &:hover {
       background-color: rgba($color-primary, .2);
     }
@@ -20,6 +28,12 @@
     display: block;
     padding: 1.875rem 2.25rem 1.75rem;
     font-weight: 400;
+    
+    @include respond(tab-port-medium) {
+      width: 90%;
+      padding: .875rem 1.25rem .75rem;
+      color: rgba($color-secondary, .7);
+    }
   }
 }
 .navigation__list:hover .dropdown__menu {
@@ -29,4 +43,47 @@
   visibility: visible;
 }
 // --------------------------- //
-// Form Dropdown
+// Navigation Dropdown
+.navigation__dropdown {
+  @include respond(tab-port-medium-min) {
+    display: none;
+  }
+  grid-row: 1 / 2;
+  grid-column: col-end 7 / col-end 8;
+  align-self: end;
+  justify-self: end;
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  transition: background-color .3s;
+  &-btn {
+    height: 5rem;
+    width: 5rem;
+    background-color: rgba($bkg-top-color , .4);
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  &-icon,
+  &-icon::before,
+  &-icon::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3rem;
+    background-color: #fff;
+    position: absolute;
+  }
+  &-icon {
+    margin-left: 7px;
+    &::before {
+      margin-top: -10px;
+    }
+    &::after {
+      margin-top: 10px;
+    }
+  }
+  &:hover {
+    background-color: $color-tertiary;
+  }
+}

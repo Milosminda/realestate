@@ -3,16 +3,19 @@
   background-size: cover;
   background-position: center;
   grid-column: full-start / full-end;
-  grid-template-rows: 5rem repeat(3, min-content);
+  // grid-template-rows: 5rem repeat(3, min-content);
   @include grid-template-columns;
   color: $color-secondary;
   font-size: 1.7rem;
   font-weight: 700;
-  // grid-row-gap: 1rem;
+  @include respond(tab-port-medium) { padding-bottom: 2rem; }
   &__contact {
-    grid-column: col-end 6 / center-end;
+    grid-column: 7 / 8;
     text-align: end;
-    align-self: center;
+    align-self: end;
+    @include respond(tab-port-medium) {
+      grid-column: 6 / 7;
+    }
     &-icon {
       width: 3rem;
       height: 3rem;
@@ -20,6 +23,8 @@
     }
     &-number {
       font-size: 2.8rem;
+      @include respond(tab-land-medium) {font-size: 2.2rem;}
+      @include respond(tab-port-medium) { font-size: 1.9rem;}
     }
   }
   &__content {
@@ -27,6 +32,15 @@
     grid-row: 2 / 3;
     align-self: end;
     margin-top: 20rem;
+    @include respond(tab-land) {grid-column: center-start / col-end 4;}
+    @include respond(tab-land-medium) {
+      grid-row: 3 / 4;
+      margin-top: 0rem;
+    }
+    @include respond(tab-port-small) {
+      grid-column: col-start 1 / center-end 7;
+      margin-top: 1rem;
+     }
     h1 {
       margin-bottom: 2rem;
     }
@@ -48,7 +62,11 @@
 .logo {
   width: 12rem;
   height: 11rem;
-  padding: 1rem;
+  padding-top: 1rem;
+  @include respond(phone-medium) {
+    width: 10rem;
+    height: 9rem;
+  }
   &__img {
     width: 100%;
     height: 100%;

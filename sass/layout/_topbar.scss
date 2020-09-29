@@ -6,6 +6,7 @@
   align-content: center;
   color: $color-primary;
   font-size: 1.3rem;
+  padding: 2rem 0;
   &__text {
     grid-column: center-start / col-start 6;
     align-self: center;
@@ -27,4 +28,15 @@
   &-icon:hover {
     fill: $color-secondary;
   }
+}
+// Navbar
+.navbar {
+  grid-column: center-start / center-end;
+  grid-row: 1 / 2;
+  display: grid;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // @include respond(tab-port-medium) {
+  //   background-color: rgba($bkg-top-color , .9);;
+  // }
 }

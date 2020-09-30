@@ -12,6 +12,21 @@
     opacity: 1;
   }
 }
+// Auto Slide Background Image
+@keyframes bkg-slideshow {
+  0% {
+    background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .4), rgba($bkg-top-color, .9)), url(../img/header-bg-1-min.jpg);
+    @include respond-img {
+      background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .4), rgba($bkg-top-color, .9)), url(../img/header-bg-1.jpg);
+    }
+  }
+  100% {
+    background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .4), rgba($bkg-top-color, .9)), url(../img/header-bg-2-min.jpg);
+    @include respond-img {
+      background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .4), rgba($bkg-top-color, .9)), url(../img/header-bg-2.jpg);
+    }
+  }
+}
 // Fade 
 @keyframes fade {
   from {opacity: .4} 

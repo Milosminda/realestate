@@ -45,8 +45,9 @@
 // --------------------------- //
 // Navigation Dropdown
 .navigation__dropdown {
-  @include respond(tab-port-medium-min) {
-    display: none;
+  display: none;
+  @include respond(tab-port-medium) {
+    display: block;
   }
   grid-row: 1 / 2;
   grid-column: col-end 7 / col-end 8;

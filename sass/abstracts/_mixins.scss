@@ -98,7 +98,10 @@ ORDER: Base + typography > general layout + grid > page layut > components
 	@if $breakpoint == tab-land-medium {
 		@media only screen and (max-width: $tab-land-medium) { @content }; // 1050px
 	}
-	@if $breakpoint == tab-land {
+	@if $breakpoint == tab-land-min {
+		@media only screen and (min-width: $tab-land) { @content }; // 1200px
+  }
+  @if $breakpoint == tab-land {
 		@media only screen and (max-width: $tab-land) { @content }; // 1200px
 	}
 	@if $breakpoint == big-desktop {

@@ -30,6 +30,16 @@ ORDER: Base + typography > general layout + grid > page layut > components
     transform: translateY(0);
     opacity: 1; } }
 
+@keyframes bkg-slideshow {
+  0% {
+    background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.4), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1-min.jpg);
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.4), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1.jpg); } }
+  100% {
+    background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.4), rgba(10, 25, 35, 0.9)), url(../img/header-bg-2-min.jpg);
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.4), rgba(10, 25, 35, 0.9)), url(../img/header-bg-2.jpg); } } }
+
 @keyframes fade {
   from {
     opacity: .4; }
@@ -169,12 +179,11 @@ body {
     grid-row: 3 / 4;
     display: flex;
     justify-content: space-around;
-    margin-top: 5rem;
+    margin-top: 2rem;
     z-index: 999; }
     @media only screen and (max-width: 65.62em) {
       .checkmark__box {
-        grid-row: 4 / 5;
-        margin-top: 2rem; } }
+        grid-row: 4 / 5; } }
 
 .btn {
   font-size: 2rem;
@@ -347,12 +356,12 @@ body {
   grid-row: 2 / 4;
   background-color: rgba(10, 25, 35, 0.7);
   padding: 5rem;
-  margin: 6rem 0 5rem 8rem;
+  margin: 4rem 0 5rem 8rem;
   font-family: "Poppins", sans-serif; }
   @media only screen and (max-width: 65.62em) {
     .form__content {
       grid-row: 3 / 5;
-      margin: 3rem 0 2rem 4rem; } }
+      margin: 3rem 0 rem 4rem; } }
   @media only screen and (max-width: 50em) {
     .form__content {
       margin: 2rem 0 0 0; } }
@@ -443,9 +452,6 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
       grid-column: col-start 4 / col-end 8;
       grid-row: 2 / 3;
       margin-top: 1rem; } }
-  @media only screen and (min-width: 50em) {
-    .navigation {
-      display: grid !important; } }
   @media only screen and (max-width: 50em) {
     .navigation {
       grid-column: center-start / center-end;
@@ -584,6 +590,7 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   visibility: visible; }
 
 .navigation__dropdown {
+  display: none;
   grid-row: 1 / 2;
   grid-column: col-end 7 / col-end 8;
   align-self: end;
@@ -592,9 +599,9 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   height: 5rem;
   width: 5rem;
   transition: background-color .3s; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (max-width: 50em) {
     .navigation__dropdown {
-      display: none; } }
+      display: block; } }
   .navigation__dropdown-btn {
     height: 5rem;
     width: 5rem;
@@ -619,7 +626,7 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
     background-color: #fe5d4c; }
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.2), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1-min.jpg);
+  background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.4), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1-min.jpg);
   background-size: cover;
   background-position: center;
   grid-column: full-start / full-end;
@@ -628,12 +635,16 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   color: #fff;
   font-size: 1.7rem;
   font-weight: 700; }
+  @media only screen and (min-width: 75em) {
+    .header {
+      animation: bkg-slideshow 16s linear infinite 0s;
+      animation-timing-function: ease-in-out; } }
   @media only screen and (max-width: 50em) {
     .header {
       padding-bottom: 2rem; } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.2), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.4), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1.jpg); } }
   .header__contact {
     grid-column: 7 / 8;
     text-align: end;
@@ -656,19 +667,17 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   .header__content {
     grid-column: center-start / col-end 3;
     grid-row: 2 / 3;
-    align-self: end;
-    margin-top: 20rem; }
+    align-self: end; }
     @media only screen and (max-width: 75em) {
       .header__content {
         grid-column: center-start / col-end 4; } }
     @media only screen and (max-width: 65.62em) {
       .header__content {
-        grid-row: 3 / 4;
-        margin-top: 0rem; } }
+        grid-row: 3 / 4; } }
     @media only screen and (max-width: 43.75em) {
       .header__content {
         grid-column: col-start 1 / center-end 7;
-        margin-top: 1rem; } }
+        margin-top: 2rem; } }
     .header__content h1 {
       margin-bottom: 2rem; }
     .header__content-box {

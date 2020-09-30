@@ -1,5 +1,5 @@
 .header {
-  background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .2), rgba($bkg-top-color, .9)), url(../img/header-bg-1-min.jpg);
+  background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .4), rgba($bkg-top-color, .9)), url(../img/header-bg-1-min.jpg);
   background-size: cover;
   background-position: center;
   grid-column: full-start / full-end;
@@ -7,9 +7,13 @@
   color: $color-secondary;
   font-size: 1.7rem;
   font-weight: 700;
+  @include respond(tab-land-min) {
+    animation: bkg-slideshow 16s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+  }
   @include respond(tab-port-medium) { padding-bottom: 2rem; }
   @include respond-img {
-    background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .2), rgba($bkg-top-color, .9)), url(../img/header-bg-1.jpg);
+    background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .4), rgba($bkg-top-color, .9)), url(../img/header-bg-1.jpg);
   }
   &__contact {
     grid-column: 7 / 8;
@@ -33,15 +37,15 @@
     grid-column: center-start / col-end 3;
     grid-row: 2 / 3;
     align-self: end;
-    margin-top: 20rem;
+    // margin-top: 20rem;
     @include respond(tab-land) {grid-column: center-start / col-end 4;}
     @include respond(tab-land-medium) {
       grid-row: 3 / 4;
-      margin-top: 0rem;
+      // margin-top: 0rem;
     }
     @include respond(tab-port-small) {
       grid-column: col-start 1 / center-end 7;
-      margin-top: 1rem;
+      margin-top: 2rem;
      }
     h1 {
       margin-bottom: 2rem;

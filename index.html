@@ -60,32 +60,32 @@
     <div class="box-center">
       <!-- Logo -->
       <div class="navbar">
-      <div class="logo">
-        <img class="logo__img" src="img/logo.png" alt="Logo">
-        <!-- <p class="logo__text">RealEstate</p> -->
-      </div>
-      <!-- Logo END -->
+        <div class="logo">
+          <img class="logo__img" src="img/logo.png" alt="Logo">
+          <!-- <p class="logo__text">RealEstate</p> -->
+        </div>
+        <!-- Logo END -->
 
-      <!-- Contact -->
-      <div class="header__contact">
-        <p class="header__contact-text">Get in touch with us</p>
-        <svg class="icon header__contact-icon">
-          <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
-        </svg>
-        <a href="tel:800-2345-6789" class="header__contact-number">800-2345-6789</a>
+        <!-- Contact -->
+        <div class="header__contact">
+          <p class="header__contact-text">Get in touch with us</p>
+          <svg class="icon header__contact-icon">
+            <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
+          </svg>
+          <a href="tel:800-2345-6789" class="header__contact-number">800-2345-6789</a>
+        </div>
+        <!-- Contact END-->
+
+        <!-- Dropdown BTN -->
+        <div class="navigation__dropdown">
+          <button type="button" class="navigation__dropdown-btn">
+            <span class="navigation__dropdown-icon"></span>
+          </button>
+        </div>
+        <!-- Dropdown BTN -->
       </div>
-      <!-- Contact END-->
-      
-      <!-- Dropdown BTN -->
-      <div class="navigation__dropdown">
-        <button type="button" class="navigation__dropdown-btn">
-          <span class="navigation__dropdown-icon"></span>
-        </button>
-      </div>
-      <!-- Dropdown BTN -->
-    </div>
       <!-- Navigation -->
-      <nav class="navigation"> 
+      <nav class="navigation">
         <ul class="navigation__item">
           <!-- Home -->
           <li class="navigation__list">
@@ -155,7 +155,7 @@
                 <a href="#" class="dropdown__menu-link">Sidebar setting</a>
               </li>
               <li class="dropdown__menu-list">
-                <a href="#" class="dropdown__menu-link">Cetvrti</a>
+                <a href="#" class="dropdown__menu-link">Fourth</a>
               </li>
             </ul>
           </li>
@@ -166,7 +166,7 @@
         </ul>
       </nav>
       <!-- Navigation END -->
-      
+
       <!-- Header Heading -->
       <div class="header__content">
         <input type="radio" id="s-1" name="slide-group" class="slide__group">
@@ -354,7 +354,9 @@
       <div class="latest__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-1-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-1-min.jpg 500w, img/livingroom-1.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em)  40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-1-min.jpg">
           <div class="card__img-price">
             <span>House</span>
           </div>
@@ -417,9 +419,15 @@
         <!-- Card IMG -->
         <div class="card__img">
           <button class="btn__slide btn__slide--1 js__slide-1">&#10094;</button>
-          <img src="img/bathroom-1-min.jpg" alt="Bathroom" class="card__img-img slide-img fade">
-          <img src="img/bedroom-2-min.jpg" alt="Bedroom" class="card__img-img slide-img fade">
-          <img src="img/livingroom-2-min.jpg" alt="Living room" class="card__img-img slide-img fade">
+          <img srcset="img/bathroom-1-min.jpg 500w, img/bathroom-1.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Bathroom"
+            class="card__img-img slide-img fade" src="img/bathroom-1-min.jpg">
+          <img srcset="img/bedroom-2-min.jpg 500w, img/bedroom-2.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Bedroom"
+            class="card__img-img slide-img fade" src="img/bedroom-2-min.jpg">
+          <img srcset="img/livingroom-2-min.jpg 500w, img/livingroom-2.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img slide-img fade" src="img/livingroom-2-min.jpg">
           <div class="card__img-price">
             <span>Apartment</span>
           </div>
@@ -482,7 +490,9 @@
       <div class="latest__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-3-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-3-min.jpg 500w, img/livingroom-3.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-3-min.jpg">
           <div class="card__img-price">
             <span>House</span>
           </div>
@@ -545,9 +555,15 @@
         <!-- Card IMG -->
         <div class="card__img">
           <button class="btn__slide btn__slide--1 js__slide-2">&#10094;</button>
-          <img src="img/bathroom-2-min.jpg" alt="Bathroom" class="card__img-img slide-img--2 fade">
-          <img src="img/bedroom-1-min.jpg" alt="Bedroom" class="card__img-img slide-img--2 fade">
-          <img src="img/livingroom-4-min.jpg" alt="Living room" class="card__img-img slide-img--2 fade">
+          <img srcset="img/bathroom-2-min.jpg 500w, img/bathroom-2.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Bathroom"
+            class="card__img-img slide-img--2 fade" src="img/bathroom-2-min.jpg">
+          <img srcset="img/bedroom-1-min.jpg 500w, img/bedroom-1.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Bedroom"
+            class="card__img-img slide-img--2 fade" src="img/bedroom-1-min.jpg">
+          <img srcset="img/livingroom-4-min.jpg 500w, img/livingroom-4.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img slide-img--2 fade" src="img/livingroom-4-min.jpg">
           <div class="card__img-price">
             <span>Building area</span>
           </div>
@@ -698,7 +714,9 @@
       <div class="featured__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-1-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-1-min.jpg 500w, img/livingroom-1.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-1-min.jpg">
           <div class="card__img-price">
             <span>House <span>&dollar; 245</span></span>
           </div>
@@ -760,7 +778,9 @@
       <div class="featured__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-2-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-2-min.jpg 500w, img/livingroom-2.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-2-min.jpg">
           <div class="card__img-price">
             <span>House <span>&dollar; 320</span></span>
           </div>
@@ -822,7 +842,9 @@
       <div class="featured__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-3-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-3-min.jpg 500w, img/livingroom-3.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-3-min.jpg">
           <div class="card__img-price">
             <span>House <span>&dollar; 480</span></span>
           </div>
@@ -987,7 +1009,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-1-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-1-min.jpg 500w, img/livingroom-1.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-1-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->
@@ -1004,7 +1028,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/bedroom-3-min.jpg" alt="Bedroom" class="card__img-img scale__img">
+          <img srcset="img/bedroom-3-min.jpg 500w, img/bedroom-3.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Bedroom"
+            class="card__img-img scale__img" src="img/bedroom-3-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->
@@ -1021,7 +1047,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-3-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-3-min.jpg 500w, img/livingroom-3.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-3-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->
@@ -1038,7 +1066,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-5-min.jpg" alt="Living room" class="card__img-img scale__img">
+          <img srcset="img/livingroom-5-min.jpg 500w, img/livingroom-5.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Living room"
+            class="card__img-img scale__img" src="img/livingroom-5-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->
@@ -1055,7 +1085,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/bedroom-4-min.jpg" alt="Bedroom" class="card__img-img scale__img">
+          <img srcset="img/bedroom-4-min.jpg 500w, img/bedroom-4.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Bedroom"
+            class="card__img-img scale__img" src="img/bedroom-4-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->
@@ -1072,7 +1104,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-6-min.jpg" alt="Livingroom" class="card__img-img scale__img">
+          <img srcset="img/livingroom-6-min.jpg 500w, img/livingroom-6.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Livingroom"
+            class="card__img-img scale__img" src="img/livingroom-6-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->
@@ -1089,7 +1123,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/livingroom-2-min.jpg" alt="Livingroom" class="card__img-img scale__img">
+          <img srcset="img/livingroom-2-min.jpg 500w, img/livingroom-2.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Livingroom"
+            class="card__img-img scale__img" src="img/livingroom-2-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->
@@ -1106,7 +1142,9 @@
       <div class="bestdeals__properties-card card">
         <!-- Card IMG -->
         <div class="card__img">
-          <img src="img/bedroom-1-min.jpg" alt="Bedroom" class="card__img-img scale__img">
+          <img srcset="img/bedroom-1-min.jpg 500w, img/bedroom-1.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw, 315px" alt="Bedroom"
+            class="card__img-img scale__img" src="img/bedroom-1-min.jpg">
         </div>
         <!-- Card IMG END -->
         <!-- Card CONTENT -->

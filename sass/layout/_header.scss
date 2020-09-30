@@ -1,14 +1,16 @@
 .header {
-  background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .2), rgba($bkg-top-color, .9)), url(../img/header-bg-1.jpg);
+  background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .2), rgba($bkg-top-color, .9)), url(../img/header-bg-1-min.jpg);
   background-size: cover;
   background-position: center;
   grid-column: full-start / full-end;
-  // grid-template-rows: 5rem repeat(3, min-content);
   @include grid-template-columns;
   color: $color-secondary;
   font-size: 1.7rem;
   font-weight: 700;
   @include respond(tab-port-medium) { padding-bottom: 2rem; }
+  @include respond-img {
+    background-image: linear-gradient(to right bottom, rgba($bkg-top-color, .2), rgba($bkg-top-color, .9)), url(../img/header-bg-1.jpg);
+  }
   &__contact {
     grid-column: 7 / 8;
     text-align: end;

@@ -102,18 +102,54 @@
   background-position: center;
   background-size: cover;
   font-family: $font-link;
- &--1 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
-   rgba($bkg-btn-color, .6)), url(../img/london.jpg);}
- &--2 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
-   rgba($bkg-btn-color, .6)), url(../img/rome.jpg);}
- &--3 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
-   rgba($bkg-btn-color, .6)), url(../img/tokyo.jpg);}
- &--4 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
-     rgba($bkg-btn-color, .6)), url(../img/paris.jpg);}
- &--5 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
-   rgba($bkg-btn-color, .6)), url(../img/newyork.jpg);}
- &--6 {background-image: linear-gradient(rgba($bkg-btn-color, .6),
-   rgba($bkg-btn-color, .6)), url(../img/dubai.jpg);}
+ &--1 {
+   background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/london-min.jpg);
+   @include respond-img {
+    background-image: linear-gradient(rgba($bkg-btn-color, .6),
+    rgba($bkg-btn-color, .6)), url(../img/london.jpg);
+   }
+  }
+ &--2 {
+   background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/rome-min.jpg);
+   @include respond-img {
+    background-image: linear-gradient(rgba($bkg-btn-color, .6),
+    rgba($bkg-btn-color, .6)), url(../img/rome.jpg);
+   }
+  }
+ &--3 {
+   background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/tokyo-min.jpg);
+   @include respond-img {
+    background-image: linear-gradient(rgba($bkg-btn-color, .6),
+    rgba($bkg-btn-color, .6)), url(../img/tokyo.jpg);
+   }
+  }
+ &--4 {
+   background-image: linear-gradient(rgba($bkg-btn-color, .6),
+     rgba($bkg-btn-color, .6)), url(../img/paris-min.jpg);
+     @include respond-img {
+      background-image: linear-gradient(rgba($bkg-btn-color, .6),
+      rgba($bkg-btn-color, .6)), url(../img/paris.jpg);
+     }
+    }
+ &--5 {
+   background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/newyork-min.jpg);
+   @include respond-img {
+    background-image: linear-gradient(rgba($bkg-btn-color, .6),
+    rgba($bkg-btn-color, .6)), url(../img/newyork.jpg);
+   }
+  }
+ &--6 {
+   background-image: linear-gradient(rgba($bkg-btn-color, .6),
+   rgba($bkg-btn-color, .6)), url(../img/dubai-min.jpg);
+   @include respond-img {
+    background-image: linear-gradient(rgba($bkg-btn-color, .6),
+    rgba($bkg-btn-color, .6)), url(../img/dubai.jpg);
+   }
+  }
   & > * {
     position: absolute;
   }

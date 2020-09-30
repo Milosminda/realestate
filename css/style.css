@@ -310,17 +310,35 @@ body {
   background-size: cover;
   font-family: "Caveat Brush", cursive; }
   .locations__card--1 {
-    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/london.jpg); }
+    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/london-min.jpg); }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      .locations__card--1 {
+        background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/london.jpg); } }
   .locations__card--2 {
-    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/rome.jpg); }
+    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/rome-min.jpg); }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      .locations__card--2 {
+        background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/rome.jpg); } }
   .locations__card--3 {
-    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/tokyo.jpg); }
+    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/tokyo-min.jpg); }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      .locations__card--3 {
+        background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/tokyo.jpg); } }
   .locations__card--4 {
-    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/paris.jpg); }
+    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/paris-min.jpg); }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      .locations__card--4 {
+        background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/paris.jpg); } }
   .locations__card--5 {
-    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/newyork.jpg); }
+    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/newyork-min.jpg); }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      .locations__card--5 {
+        background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/newyork.jpg); } }
   .locations__card--6 {
-    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/dubai.jpg); }
+    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/dubai-min.jpg); }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+      .locations__card--6 {
+        background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(../img/dubai.jpg); } }
   .locations__card > * {
     position: absolute; }
 
@@ -416,7 +434,6 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   grid-column: col-start 3 / col-end 6;
   grid-row: 1 / 2;
   font-size: 2rem;
-  display: grid;
   align-content: end; }
   @media only screen and (max-width: 75em) {
     .navigation {
@@ -426,6 +443,9 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
       grid-column: col-start 4 / col-end 8;
       grid-row: 2 / 3;
       margin-top: 1rem; } }
+  @media only screen and (min-width: 50em) {
+    .navigation {
+      display: grid !important; } }
   @media only screen and (max-width: 50em) {
     .navigation {
       grid-column: center-start / center-end;
@@ -479,19 +499,18 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
       height: 4px;
       background-color: transparent; }
 
-.active__list .navigation__link::after {
-  transform: scaleX(1);
-  transition: all .5s;
-  background-color: #fe5d4c; }
-
-.active__list:not(:last-child)::after {
-  transform: rotate(-135deg); }
-
-.active__list .dropdown__menu {
-  transform: translate(0, 0);
-  opacity: 1;
-  visibility: visible; }
-  @media only screen and (max-width: 50em) {
+@media only screen and (max-width: 50em) {
+  .active__list .navigation__link::after {
+    transform: scaleX(1);
+    transition: all .5s;
+    background-color: #fe5d4c; }
+  .active__list:not(:last-child)::after {
+    transform: rotate(-135deg); }
+  .active__list .dropdown__menu {
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible; } }
+  @media only screen and (max-width: 50em) and (max-width: 50em) {
     .active__list .dropdown__menu {
       display: block; } }
 
@@ -600,7 +619,7 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
     background-color: #fe5d4c; }
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.2), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.2), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1-min.jpg);
   background-size: cover;
   background-position: center;
   grid-column: full-start / full-end;
@@ -612,6 +631,9 @@ input[type="checkbox"]:checked ~ div + .form__more-toggle::after {
   @media only screen and (max-width: 50em) {
     .header {
       padding-bottom: 2rem; } }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(10, 25, 35, 0.2), rgba(10, 25, 35, 0.9)), url(../img/header-bg-1.jpg); } }
   .header__contact {
     grid-column: 7 / 8;
     text-align: end;
